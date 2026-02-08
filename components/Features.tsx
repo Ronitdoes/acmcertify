@@ -22,7 +22,7 @@ const features: Feature[] = [
 
 export default function Features() {
     return (
-        <section className="py-24 px-6 lg:px-20 bg-[#050505] border-t border-white/5 relative z-10">
+        <section className="py-24 px-6 lg:px-20 border-t border-white/5 relative z-10">
             <div className="max-w-[1280px] mx-auto">
                 <div className="mb-16">
                     <h2 className="text-3xl lg:text-4xl font-black mb-4 text-white">The Standard for Verification</h2>

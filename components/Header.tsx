@@ -40,13 +40,13 @@ export default function Header() {
 
                 <nav className="hidden md:flex items-center gap-10">
                     {links.map((link) => (
-                        <a
+                        <Link
                             key={link.name}
-                            href={link.href}
+                            to={link.href}
                             className="text-sm font-semibold text-slate-300 hover:text-primary transition-colors duration-200"
                         >
                             {link.name}
-                        </a>
+                        </Link>
                     ))}
                 </nav>
 
@@ -70,13 +70,14 @@ export default function Header() {
             {mobileMenuOpen && (
                 <div className="md:hidden absolute top-full left-0 right-0 glass-nav border-t border-white/5 p-6 flex flex-col gap-4">
                     {links.map((link) => (
-                        <a
+                        <Link
                             key={link.name}
-                            href={link.href}
+                            to={link.href}
+                            onClick={() => setMobileMenuOpen(false)}
                             className="text-sm font-semibold text-slate-300 hover:text-primary py-2"
                         >
                             {link.name}
-                        </a>
+                        </Link>
                     ))}
                     <div className="flex flex-col gap-2 mt-2">
                         <Link to="/login" className="w-full text-left text-sm font-bold py-2 text-white hover:text-primary pl-1">

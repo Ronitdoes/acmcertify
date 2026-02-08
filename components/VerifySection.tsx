@@ -9,9 +9,9 @@ export default function VerifySection() {
     const handleVerify = (e: React.FormEvent) => {
         e.preventDefault();
         if (!id) return;
-        
+
         setStatus('loading');
-        
+
         // Simulate API call with fake data
         setTimeout(() => {
             // Mock validation: "ACM-" prefix works, or just any non-empty string for demo purposes if it starts with ACM
@@ -27,7 +27,7 @@ export default function VerifySection() {
         <section id="verify" className="py-24 px-6 lg:px-20 relative z-10 border-t border-white/5 bg-[#050505]">
             <div className="max-w-[1280px] mx-auto">
                 <div className="flex flex-col lg:flex-row gap-16 items-center">
-                    
+
                     {/* Left Side: Content */}
                     <div className="flex-1 w-full max-w-xl">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest w-fit mb-6">
@@ -35,7 +35,7 @@ export default function VerifySection() {
                             Instant Verification
                         </div>
                         <h2 className="text-3xl lg:text-5xl font-black text-white mb-6 leading-tight">
-                            Verify Credential <br/>
+                            Verify Credential <br />
                             <span className="text-slate-500">Authenticity</span>
                         </h2>
                         <p className="text-slate-400 mb-8 text-lg leading-relaxed">
@@ -46,14 +46,14 @@ export default function VerifySection() {
                             <div className="relative group">
                                 <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-cyan-400 rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
                                 <div className="relative flex shadow-2xl">
-                                    <input 
-                                        type="text" 
+                                    <input
+                                        type="text"
                                         value={id}
                                         onChange={(e) => setId(e.target.value)}
                                         placeholder="Certificate ID (Try: ACM-8392)"
                                         className="w-full bg-[#0a0a0a] border border-white/10 rounded-l-lg py-4 pl-6 pr-4 text-white placeholder:text-slate-600 focus:outline-none focus:ring-1 focus:ring-primary/50 transition-all font-mono tracking-wide"
                                     />
-                                    <button 
+                                    <button
                                         type="submit"
                                         disabled={status === 'loading'}
                                         className="bg-primary hover:bg-primary/90 text-white font-bold px-8 rounded-r-lg transition-all flex items-center justify-center min-w-[140px] border border-l-0 border-white/10"
@@ -81,10 +81,10 @@ export default function VerifySection() {
                         <div className="w-full max-w-md min-h-[350px] relative perspective-container">
                             {/* Card Background / Placeholder */}
                             <div className="absolute inset-0 bg-[#0f0f0f] border border-white/5 rounded-2xl transform rotate-3 z-0"></div>
-                            
+
                             <AnimatePresence mode="wait">
                                 {status === 'idle' && (
-                                    <motion.div 
+                                    <motion.div
                                         key="idle"
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
@@ -100,7 +100,7 @@ export default function VerifySection() {
                                 )}
 
                                 {status === 'loading' && (
-                                    <motion.div 
+                                    <motion.div
                                         key="loading"
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
@@ -117,7 +117,7 @@ export default function VerifySection() {
                                 )}
 
                                 {status === 'success' && (
-                                    <motion.div 
+                                    <motion.div
                                         key="success"
                                         initial={{ opacity: 0, scale: 0.95, rotateY: 10 }}
                                         animate={{ opacity: 1, scale: 1, rotateY: 0 }}
@@ -129,7 +129,7 @@ export default function VerifySection() {
                                         <div className="absolute top-5 right-5 text-green-500 bg-green-500/10 p-2 rounded-full">
                                             <CheckCircle className="w-5 h-5" />
                                         </div>
-                                        
+
                                         <div className="mb-8 mt-2">
                                             <p className="text-xs text-primary font-bold uppercase tracking-widest mb-2">Verified Credential</p>
                                             <h3 className="text-2xl font-serif text-white leading-tight">Advanced System Architecture</h3>
@@ -169,7 +169,7 @@ export default function VerifySection() {
                                 )}
 
                                 {status === 'error' && (
-                                    <motion.div 
+                                    <motion.div
                                         key="error"
                                         initial={{ opacity: 0, scale: 0.95 }}
                                         animate={{ opacity: 1, scale: 1 }}
@@ -181,7 +181,7 @@ export default function VerifySection() {
                                         </div>
                                         <h3 className="text-white font-bold mb-2 text-xl">Record Not Found</h3>
                                         <p className="text-slate-500 text-sm mb-8">The ID provided does not match any valid certificate in our distributed ledger.</p>
-                                        <button 
+                                        <button
                                             onClick={() => setStatus('idle')}
                                             className="text-sm text-white hover:text-red-400 font-medium px-6 py-2 rounded-full border border-white/10 hover:border-red-500/50 transition-all"
                                         >

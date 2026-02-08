@@ -6,7 +6,7 @@ export default function CTA() {
     const navigate = useNavigate();
 
     return (
-        <section className="py-24 px-6 lg:px-20 text-center bg-[#050505] relative z-10">
+        <section className="py-24 px-6 lg:px-20 text-center relative z-10">
             <div className="max-w-[800px] mx-auto bg-gradient-to-br from-[#121212] to-black border border-white/10 rounded-[2rem] p-12 lg:p-20 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl -ml-32 -mb-32"></div>
