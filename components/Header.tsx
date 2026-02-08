@@ -34,7 +34,7 @@ export default function Header() {
                         <img src={acmLogo} alt="ACM Logo" className="w-full h-full object-contain" />
                     </div>
                     <h2 className="text-xl font-extrabold tracking-tight hidden sm:block text-white group-hover:text-primary transition-colors">
-                        ACM-Certify
+                        ACM-Get My Certificate
                     </h2>
                 </Link>
 

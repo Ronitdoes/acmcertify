@@ -71,7 +71,7 @@ const Preloader: React.FC = () => {
                         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                         className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400 tracking-tight"
                     >
-                        Proof of Mastery
+                        Get My Certificate
                     </motion.h1>
                 </div>
 
